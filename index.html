@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bat Ball Stump Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bat Ball Stump Game</h1>
+    </div>
+
+    <div class="btn">
+        <button onclick="playGame('Bat')">Bat</button>
+        <button onclick="playGame('Ball')">Ball</button>
+        <button onclick="playGame('Stump')">Stump</button>
+    </div>
+
+    <script>
+        function playGame(userChoice) {
+            const randomNumber = Math.random() * 3;
+            let computerChoice = '';
+
+            if (randomNumber <= 1) {
+                computerChoice = 'Bat';
+            } else if (randomNumber <= 2) {
+                computerChoice = 'Ball';
+            } else {
+                computerChoice = 'Stump';
+            }
+
+            let resultMsg = '';
+
+            if (userChoice === computerChoice) {
+                resultMsg = "It's a tie.";
+            } else if (
+                (userChoice === 'Bat' && computerChoice === 'Stump') ||
+                (userChoice === 'Ball' && computerChoice === 'Bat') ||
+                (userChoice === 'Stump' && computerChoice === 'Ball')
+            ) {
+                resultMsg = 'You won!';
+            } else {
+                resultMsg = 'Computer has won.';
+            }
+
+            alert(`You chose ${userChoice}. Computer chose ${computerChoice}. ${resultMsg}`);
+        }
+    </script>
+</body>
+
+</html>
