@@ -15,9 +15,6 @@ Built using HTML, CSS, and JavaScript.
 - Math.random() logic
 - Event handling and condition checking
 
-### 📸 Screenshot
-![Game Preview](screenshot.png)
 
----
 
-👨‍💻 Made as part of the [KnowledgeGate JavaScript Course](https://www.youtube.com/@KnowledgeGate)
+
